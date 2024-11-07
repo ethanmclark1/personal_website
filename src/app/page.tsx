@@ -1,7 +1,7 @@
 import { PageWrapper } from '@/components/layout/PageWrapper'
 import { About } from '@/components/home/About'
 import { BeyondTech } from '@/components/home/BeyondTech'
-import { RecentEssays } from '@/components/home/RecentEssays'
+import { RecentPosts } from '@/components/home/RecentPosts'
 import { FeaturedProjects } from '@/components/home/FeaturedProjects'
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <div className="space-y-16">
         <About />
         <BeyondTech />
-        <RecentEssays />
+        <RecentPosts/>
         <FeaturedProjects />
       </div>
     </PageWrapper>

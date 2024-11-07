@@ -1,4 +1,4 @@
-export interface Essay {
+export interface Blog {
   date: string;
   title: string;
   slug: string;
