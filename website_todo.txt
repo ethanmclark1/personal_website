@@ -1,0 +1,6 @@
+Add individual posts
+Fix align with homepage, blogs, projects
+Brainstorm copy for homepage
+Build out projects tab with a short description that links you to the GitHub project
+Build out README
+Host somewhere (Vercel? Github?)

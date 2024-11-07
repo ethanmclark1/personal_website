@@ -1,27 +1,22 @@
 import { PageWrapper } from '@/components/layout/PageWrapper'
-import { posts } from '@/lib/constants/blog'
+import { getAllPosts } from '@/lib/mdx'
+import { PostFrontmatter } from '@/types'
+import { formatShortDate } from '@/lib/utils/date'
 
-export default function Blogs() {
-  // Sort posts by date (assuming date format "MMM YYYY")
-  const sortedPosts = [...posts].sort((a, b) => {
-    const dateA = new Date(a.date + " 1"); // Add day for proper parsing
-    const dateB = new Date(b.date + " 1");
-    return dateB.getTime() - dateA.getTime();
-  });
-
-  // Take only the three most recent blogs
-  const recentPosts = sortedPosts.slice(0, 3);
+export default function Blog() {
+  const allPosts = getAllPosts()
+  const recentPosts = allPosts.slice(0, 3)
 
   return (
     <PageWrapper>
       <div className="space-y-8">
-        <h1 className="text-3xl font-bold">Blogs</h1>
+        <h1 className="text-3xl font-bold">Blog</h1>
         <div className="space-y-6">
-          {recentPosts.map((post, index) => (
-            <div key={index}>
+          {recentPosts.map((post: PostFrontmatter) => (
+            <div key={post.slug}>
               <div className="flex items-center space-x-3">
-                <span className="text-gray-500">{post.date}</span>
-                <a href={`/blogs/${post.slug}`} className="text-lg hover:underline">
+                <span className="text-gray-500">{formatShortDate(post.date)}</span>
+                <a href={`/blog/${post.slug}`} className="text-lg hover:underline">
                   {post.title}
                 </a>
               </div>

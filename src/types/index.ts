@@ -1,20 +1,24 @@
-export interface Blog {
-  date: string;
-  title: string;
-  slug: string;
-  description?: string;
+import { LucideIcon } from 'lucide-react'
+
+export interface PostFrontmatter {
+  title: string
+  date: string
+  description?: string
+  slug: string
+}
+
+export interface Post extends PostFrontmatter {
+  content: string
 }
 
 export interface Project {
-  title: string;
-  slug: string;
-  description: string;
+  title: string
+  slug: string
+  description: string
 }
 
-import { LucideIcon } from 'lucide-react'
-
 export interface Interest {
-  icon: LucideIcon;
-  title: string;
-  description: string;
+  icon: LucideIcon
+  title: string
+  description: string
 }
