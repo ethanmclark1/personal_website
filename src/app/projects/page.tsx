@@ -1,23 +1,22 @@
+import { PageWrapper } from '@/components/layout/PageWrapper'
 import { projects } from '@/lib/constants/projects'
-import { ProjectCard } from '@/components/projects/ProjectCard'
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
 
 export default function Projects() {
-    return (
-        <div className="min-h-screen flex flex-col">
-            <div className="max-w-3xl mx-auto px-4 py-12 font-serif flex-grow">
-                <Header />
-                <main className="space-y-8">
-                    <h1 className="text-3xl font-bold mb-8">Projects</h1>
-                    <div className="space-y-6">
-                        {projects.map((project, index) => (
-                            <ProjectCard key={index} project={project} />
-                        ))}
-                    </div>
-                </main>
+  return (
+    <PageWrapper>
+      <div className="space-y-8">
+        <h1 className="text-3xl font-bold">Projects</h1>
+        <div className="space-y-6">
+          {projects.map((project, index) => (
+            <div key={index}>
+              <a href={`/projects/${project.slug}`} className="text-lg hover:underline">
+                {project.title}
+              </a>
+              <p className="text-gray-600 mt-2">{project.description}</p>
             </div>
-            <Footer />
+          ))}
         </div>
-    )
+      </div>
+    </PageWrapper>
+  )
 }
