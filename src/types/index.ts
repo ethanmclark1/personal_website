@@ -12,11 +12,15 @@ export interface Post extends PostFrontmatter {
 }
 
 export interface Project {
-  title: string
-  slug: string
-  description: string
+  title: string;
+  repo: string;
+  description: string;
+  tags: string[];
+  stars: number;
+  category: string;
+  featured?: boolean;
+  slug?: string;
 }
-
 export interface Interest {
   icon: LucideIcon
   title: string

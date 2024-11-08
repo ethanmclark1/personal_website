@@ -1,22 +1,26 @@
-import { PageWrapper } from '@/components/layout/PageWrapper'
-import { projects } from '@/lib/constants/projects'
+import { ProjectsList } from '@/components/projects/ProjectsList';
+import { PageWrapper } from '@/components/layout/PageWrapper';
+import { getGithubRepos } from '@/lib/utils/github';
+import { projectMetadata } from '@/lib/constants/projects';
 
-export default function Projects() {
+export const revalidate = 3600; // Revalidate every hour
+
+export default async function ProjectsPage() {
+  const repos = await getGithubRepos();
+  
+  const projects = repos.map((repo: any) => ({
+    title: projectMetadata[repo.name]?.title || repo.name,
+    repo: repo.name,
+    description: repo.description,
+    tags: repo.topics || [],
+    stars: repo.stargazers_count,
+    category: projectMetadata[repo.name]?.category || 'Other',
+  }));
+
   return (
     <PageWrapper>
-      <div className="space-y-8">
-        <h1 className="text-3xl font-bold">Projects</h1>
-        <div className="space-y-6">
-          {projects.map((project, index) => (
-            <div key={index}>
-              <a href={`/projects/${project.slug}`} className="text-lg hover:underline">
-                {project.title}
-              </a>
-              <p className="text-gray-600 mt-2">{project.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <h1 className="text-3xl font-bold mb-8">Projects</h1>
+      <ProjectsList projects={projects} />
     </PageWrapper>
-  )
+  );
 }
