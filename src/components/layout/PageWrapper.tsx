@@ -9,7 +9,7 @@ export function PageWrapper({ children }: PageWrapperProps) {
     <div className="min-h-screen flex flex-col">
       <div className="max-w-3xl w-full mx-auto px-4 py-12 font-serif flex-grow">
         <Header />
-        <main className="mt-16">
+        <main className="mt-5">
           {children}
         </main>
       </div>

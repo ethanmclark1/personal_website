@@ -16,7 +16,6 @@ export interface Project {
   repo: string;
   description: string;
   tags: string[];
-  stars: number;
   category: string;
   featured?: boolean;
   slug?: string;

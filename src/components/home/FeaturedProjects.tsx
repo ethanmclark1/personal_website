@@ -10,7 +10,9 @@ export function FeaturedProjects() {
         {featuredProjects.map((project) => (
           <div key={project.repo}>
             <a 
-              href={project.slug ? `/projects/${project.slug}` : `/projects`} 
+              href={`https://github.com/ethanmclark1/${project.repo}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-lg hover:underline"
             >
               {project.title}

@@ -34,7 +34,6 @@ export const projects: Project[] = [
     repo: 'carla_aebs',
     description: 'Deep learning-based emergency braking system built with CARLA simulator for autonomous vehicle safety',
     tags: ['Python', 'PyTorch', 'CARLA'],
-    stars: 11,
     category: 'Autonomous Systems',
     featured: true,
     slug: 'carla-aebs'
@@ -44,7 +43,6 @@ export const projects: Project[] = [
     repo: 'octomap-ros',
     description: 'ROS 2 compatible Python bindings for OctoMap, enabling efficient 3D mapping and spatial perception',
     tags: ['C++', 'ROS'],
-    stars: 0,
     category: 'Robotics',
     featured: true,
     slug: 'octomap-ros'
@@ -54,7 +52,6 @@ export const projects: Project[] = [
     repo: 'bioinformatics-sota-eval',
     description: 'Benchmarking modern neural networks for single-cell RNA sequencing analysis',
     tags: ['Python', 'Deep Learning', 'Bioinformatics'],
-    stars: 0,
     category: 'Machine Learning',
     featured: true,
     slug: 'bioinformatics-sota-eval'
@@ -64,7 +61,6 @@ export const projects: Project[] = [
     repo: 'blocksworld3d',
     description: '3D reinforcement learning environment for testing complex manipulation strategies',
     tags: ['Python', 'Reinforcement Learning'],
-    stars: 2,
     category: 'Reinforcement Learning',
     featured: false,
     slug: 'blocksworld3d'
@@ -74,7 +70,6 @@ export const projects: Project[] = [
     repo: 'rl_toolkit',
     description: 'Implementation of core reinforcement learning algorithms with PyTorch',
     tags: ['Python', 'PyTorch', 'Reinforcement Learning'],
-    stars: 0,
     category: 'Reinforcement Learning',
     featured: false,
     slug: 'rl-toolkit'
@@ -84,7 +79,6 @@ export const projects: Project[] = [
     repo: 'geat',
     description: 'Genetic and evolutionary algorithm implementations for optimization problems.',
     tags: ['Python', 'Evolutionary Algorithms'],
-    stars: 1,
     category: 'Evolutionary Computation',
     featured: false,
     slug: 'geat'

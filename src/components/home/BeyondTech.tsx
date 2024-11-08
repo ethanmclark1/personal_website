@@ -1,24 +1,13 @@
-import { interests } from '@/lib/constants/interests'
-import { Interest } from '@/types'
-
 export function BeyondTech() {
-  return (
-    <section>
-      <h2 className="text-xl font-semibold mb-4">Beyond Technology</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {interests.map((interest, index) => {
-          const Icon = interest.icon;  // Destructure the icon component
-          return (
-            <div key={index} className="flex items-start space-x-3">
-              <Icon className="w-6 h-6 text-gray-600 mt-1" />
-              <div>
-                <h3 className="font-medium mb-1">{interest.title}</h3>
-                <p className="text-gray-600">{interest.description}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  )
+ return (
+   <section>
+     <h2 className="text-xl font-semibold mb-4">Beyond Tech</h2>
+     <p className="leading-relaxed">
+       Outside the realm of AI and robotics, I'm deeply curious about the complexities of health/nutrition, history, and geopolitics. 
+       To maintain balance, I disconnect from the virtual world through basketball and hiking, while finding mindfulness in 
+       tending to my bonsai collection. My latest pursuit is mastering strategic thinking through Chess, Stratego, and Go — 
+       embracing the beginner's journey in these ancient games.
+     </p>
+   </section>
+ )
 }

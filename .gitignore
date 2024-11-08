@@ -40,3 +40,5 @@ next-env.d.ts
 
 # lock file
 .env.lock
+
+website_todo.txt

@@ -7,7 +7,7 @@ import { FeaturedProjects } from '@/components/home/FeaturedProjects'
 export default function Home() {
   return (
     <PageWrapper>
-      <div className="space-y-16">
+      <div className="space-y-8">
         <About />
         <BeyondTech />
         <RecentPosts/>
