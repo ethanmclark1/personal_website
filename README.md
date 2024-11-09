@@ -1,7 +1,7 @@
 
 # Personal Website
 
-My personal website built with Next.js and TypeScript. View it live at [ethanmclark.com](https://ethanmclark.com).
+Personal website built with Next.js and TypeScript. View it live at [ethanmclark.com](https://ethanmclark.com).
 
 ## Tech Stack
 
