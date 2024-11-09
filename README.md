@@ -1,42 +1,68 @@
 
-# Minimalist Personal Website [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
+# Personal Website
 
-Simple web app that renders minimalist personal website
+My personal website built with Next.js and TypeScript. View it live at [ethanmclark.com](https://ethanmclark.com).
 
-Built with Next.js and shadcn/ui, deployed on Vercel.
+## Tech Stack
 
-# Features
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **Analytics:** Vercel Analytics
+- **Content:** MDX for blog posts
 
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
-- Auto generated Layout
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## Features
 
-# Getting Started Locally
+- Minimalist design
+- Blog with MDX support
+- Project showcase
+- Dynamic GitHub repository integration
+- Fast page loads
+- Analytics tracking
 
-1. Clone this repository to your local machine:
+## Local Development
 
-   ```bash
-   git clone https://github.com/ethanmclark1/personal_website.git
-   ```
-2. Move to the cloned directory
+```bash
+# Clone repository
+git clone https://github.com/ethanmclark1/personal_website.git
 
-   ```bash
-   cd personal_website
-   ```
-3. Install dependencies:
+# Install dependencies
+yarn install
 
-   ```bash
-   yarn install
-   ```
-4. Start the local Server:
+# Run development server
+yarn dev
 
-   ```bash
-   yarn dev
-   ```
-5. Open the [Config file](./src/data/resume-data.tsx) and make changes
+# Build for production
+yarn build
+```
 
-# License
+## Project Structure
 
-[MIT](https://choosealicense.com/licenses/mit/)
+```
+src/
+├── app/             # Next.js app router pages
+├── components/      # React components
+├── content/         # MDX blog posts
+├── lib/             # Utilities and constants
+└── types/           # TypeScript types
+```
+
+## Blog Posts
+
+Blog posts are written in MDX format and stored in `content/posts/`. Each post includes frontmatter with metadata:
+
+```yaml
+---
+title: "Post Title"
+date: "YYYY-MM-DD"
+---
+```
+
+## Deployment
+
+The site automatically deploys to Vercel when changes are pushed to the main branch.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
