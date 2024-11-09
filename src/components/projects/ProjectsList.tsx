@@ -1,6 +1,5 @@
 import { Project } from '@/types';
 import { projectCategories } from '@/lib/constants/projects';
-import { ProjectCard } from './ProjectCard';
 
 interface ProjectsListProps {
   projects: Project[];
@@ -16,17 +15,27 @@ export function ProjectsList({ projects }: ProjectsListProps) {
   }, {} as Record<string, Project[]>);
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-8">
       {projectCategories.map((category) => {
         const categoryProjects = projectsByCategory[category];
         if (!categoryProjects?.length) return null;
 
         return (
           <section key={category}>
-            <h2 className="text-xl font-semibold mb-6">{category}</h2>
-            <div className="grid gap-6">
+            <h2 className="text-xl font-semibold mb-4">{category}</h2>
+            <div className="space-y-4">
               {categoryProjects.map((project) => (
-                <ProjectCard key={project.repo} project={project} />
+                <div key={project.repo}>
+                  <a
+                    href={`https://github.com/ethanmclark1/${project.repo}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg hover:underline"
+                  >
+                    {project.title}
+                  </a>
+                  <p className="text-gray-600">{project.description}</p>
+                </div>
               ))}
             </div>
           </section>

@@ -1,13 +1,21 @@
 export function BeyondTech() {
- return (
-   <section>
-     <h2 className="text-xl font-semibold mb-4">Beyond Tech</h2>
-     <p className="leading-relaxed">
-       Outside the realm of AI and robotics, I'm deeply curious about the complexities of health/nutrition, history, and geopolitics. 
-       To maintain balance, I disconnect from the virtual world through basketball and hiking, while finding mindfulness in 
-       tending to my bonsai collection. My latest pursuit is mastering strategic thinking through Chess, Stratego, and Go — 
-       embracing the beginner's journey in these ancient games.
-     </p>
-   </section>
- )
+  return (
+    <section>
+      <h2 className="text-xl font-semibold mb-4">Beyond Tech</h2>
+      <div className="space-y-4">
+        <p className="leading-relaxed">
+          Beyond AI and robotics, I spend time learning about nutrition, fitness, and how history 
+          shapes our world today. I stay balanced through basketball and hiking.
+        </p>
+        <p className="leading-relaxed">
+          I'm passionate about growing things — from bonsai trees and hydroponics to mycology. 
+          The slow, deliberate nature of bonsai helps me counter the short attention span that's so prevalent in our digital age.
+        </p>
+        <p className="leading-relaxed">
+          After a 15-year hiatus of thinking reading wasn't "cool," I've rediscovered books as the antidote to TikTok brain. 
+          Currently diving into sci-fi and magical realism classics — always down to trade recommendations.
+        </p>
+      </div>
+    </section>
+  )
 }

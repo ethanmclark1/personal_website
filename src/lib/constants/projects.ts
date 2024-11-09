@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     title: 'Autonomous Emergency Braking System',
     repo: 'carla_aebs',
-    description: 'Deep learning-based emergency braking system built with CARLA simulator for autonomous vehicle safety',
+    description: 'Deep learning-based emergency braking system built with CARLA simulator',
     tags: ['Python', 'PyTorch', 'CARLA'],
     category: 'Autonomous Systems',
     featured: true,
