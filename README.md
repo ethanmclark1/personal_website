@@ -1,7 +1,7 @@
 
 # Personal Website
 
-Personal website built with Next.js and TypeScript. View it live at [ethanmclark.com](https://ethanmclark.com).
+Simple web app that renders minimailist personal website
 
 ## Tech Stack
 
@@ -15,6 +15,8 @@ Personal website built with Next.js and TypeScript. View it live at [ethanmclark
 ## Features
 
 - Minimalist design
+- Auto-generated layout
+- Responsive to different devices
 - Blog with MDX support
 - Project showcase
 - Dynamic GitHub repository integration
