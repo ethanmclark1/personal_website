@@ -5,6 +5,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { MDXComponents } from 'mdx/types'
+import remarkGfm from 'remark-gfm'
 
 const components: MDXComponents = {
   a: ({ href, children }) => {
@@ -16,13 +17,15 @@ const components: MDXComponents = {
     )
   },
   ol: ({ children }) => (
-    <ol className="list-decimal pl-4 space-y-1 my-4">{children}</ol>
+    <ol className="list-decimal pl-4 my-4 space-y-2 [&>li]:mt-2 first:[&>li]:mt-0">
+      {children}
+    </ol>
   ),
   li: ({ children }) => (
     <li className="ml-4">{children}</li>
   ),
   del: ({ children }) => (
-    <del className="line-through">{children}</del>
+    <del className="line-through text-gray-500">{children}</del>
   )
 }
 
@@ -44,9 +47,11 @@ export default async function Post({ params }: { params: { slug: string } }) {
               source={post.content} 
               components={components}
               options={{
+                parseFrontmatter: true,
                 mdxOptions: {
-                  remarkPlugins: [],
-                  rehypePlugins: [],
+                  remarkPlugins: [remarkGfm],
+                  format: 'mdx',
+                  development: false
                 }
               }}
             />

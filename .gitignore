@@ -48,3 +48,5 @@ next-env.d.ts
 website_todo.txt
 notes.txt
 *.todo
+
+package-lock.json
