@@ -33,7 +33,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
     
     return (
       <PageWrapper>
-        <article className="prose prose-lg max-w-none">
+        <article className="prose prose-lg max-w-none prose-ol:list-decimal prose-ol:ml-4">
           <header className="mb-8">
             <h1 className="text-3xl font-bold mb-2">{post.frontmatter.title}</h1>
             <time className="text-gray-500">
