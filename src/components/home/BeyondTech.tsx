@@ -1,8 +1,8 @@
 export function BeyondTech() {
   return (
-    <section>
-      <h2 className="text-xl font-semibold mb-4">Beyond Tech</h2>
-      <div className="space-y-4">
+    <section className="prose prose-lg max-w-none">
+      <h2 className="text-2xl font-semibold mb-6">Beyond Tech</h2>
+      <div className="space-y-6">
         <p className="leading-relaxed">
           Beyond AI and robotics, I spend time learning about nutrition, fitness, and how history 
           shapes our world today. I stay balanced through basketball and hiking.
