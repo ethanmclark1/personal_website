@@ -1,10 +1,17 @@
 import { Project } from '@/types';
 
 export const projectMetadata: Record<string, Partial<Project>> = {
+  'commutative_rl': {
+    title: 'Commutative RL',
+    category: 'Reinforcement Learning',
+  },
+  'biped_locomotion': {
+    title: 'Biped Locomotion',
+    category: 'Robotics',
+  },
   'carla_aebs': {
     title: 'Autonomous Emergency Braking System',
     category: 'Autonomous Systems',
-    featured: true
   },
   'octomap-ros': {
     title: 'OctoMap ROS Integration',
@@ -30,9 +37,27 @@ export const projectMetadata: Record<string, Partial<Project>> = {
 
 export const projects: Project[] = [
   {
+    title: 'Commutative RL',
+    repo: 'commutative_rl',
+    description: 'Reinforcement learning framework for exploiting order-invariance in applicable domains to achieve significant sample efficiency gains',
+    tags: ['Python', 'PyTorch', 'Robotics'],
+    category: 'Reinforcement Learning',
+    featured: true,
+    slug: 'commutative-rl'
+  },
+  {
+    title: 'Biped Locomotion',
+    repo: 'biped_locomotion',
+    description: 'Imitation learning approach for robust bipedal locomotion using phase manifolds',
+    tags: ['Python', 'PyTorch', 'Robotics'],
+    category: 'Robotics',
+    featured: true,
+    slug: 'biped-locomotion'
+  },
+  {
     title: 'Autonomous Emergency Braking System',
     repo: 'carla_aebs',
-    description: 'Deep learning-based emergency braking system built with CARLA simulator',
+    description: 'Reinforcement learning based emergency braking system built using the CARLA driving simulator',
     tags: ['Python', 'PyTorch', 'CARLA'],
     category: 'Autonomous Systems',
     featured: true,
@@ -41,10 +66,10 @@ export const projects: Project[] = [
   {
     title: 'OctoMap ROS Integration',
     repo: 'octomap-ros',
-    description: 'ROS 2 compatible Python bindings for OctoMap, enabling efficient 3D mapping and spatial perception',
+    description: 'ROS 2 compatible Python bindings for OctoMap',
     tags: ['C++', 'ROS'],
     category: 'Robotics',
-    featured: true,
+    featured: false,
     slug: 'octomap-ros'
   },
   {
@@ -53,7 +78,7 @@ export const projects: Project[] = [
     description: 'Benchmarking modern neural networks for single-cell RNA sequencing analysis',
     tags: ['Python', 'Deep Learning', 'Bioinformatics'],
     category: 'Machine Learning',
-    featured: true,
+    featured: false,
     slug: 'bioinformatics-sota-eval'
   },
   {
@@ -87,8 +112,8 @@ export const projects: Project[] = [
 
 export const projectCategories = [
   'Robotics',
-  'Autonomous Systems',
   'Reinforcement Learning',
+  'Autonomous Systems',
   'Machine Learning',
   'Evolutionary Computation'
 ] as const;
