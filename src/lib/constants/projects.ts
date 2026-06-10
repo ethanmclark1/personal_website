@@ -29,6 +29,10 @@ export const projectMetadata: Record<string, Partial<Project>> = {
     title: 'RL Toolkit',
     category: 'Reinforcement Learning'
   },
+  'conav_suite': {
+    title: 'CoNav Suite',
+    category: 'Reinforcement Learning'
+  },
   'geat': {
     title: 'GEAT',
     category: 'Evolutionary Computation'
@@ -42,7 +46,7 @@ export const projects: Project[] = [
     description: 'Reinforcement learning framework for exploiting order-invariance in applicable domains to achieve significant sample efficiency gains',
     tags: ['Python', 'PyTorch', 'Robotics'],
     category: 'Reinforcement Learning',
-    featured: true,
+    featured: false, // repo is private until paper release; re-feature once public
     slug: 'commutative-rl'
   },
   {
@@ -89,6 +93,15 @@ export const projects: Project[] = [
     category: 'Reinforcement Learning',
     featured: false,
     slug: 'blocksworld3d'
+  },
+  {
+    title: 'CoNav Suite',
+    repo: 'conav_suite',
+    description: 'Problem suite for evaluating emergent communication between agents in cooperative navigation tasks',
+    tags: ['Python', 'Reinforcement Learning'],
+    category: 'Reinforcement Learning',
+    featured: false,
+    slug: 'conav-suite'
   },
   {
     title: 'RL Toolkit',
